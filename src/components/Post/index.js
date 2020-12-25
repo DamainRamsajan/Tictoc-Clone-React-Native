@@ -3,16 +3,24 @@ import {View,TouchableWithoutFeedback, Text, Image} from "react-native";
 import Video from "react-native-video";
 import styles from "./styles";
 import Entypo from "react-native-vector-icons/Entypo";
+import AntDesign from "react-native-vector-icons/AntDesign";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
+import Fontisto from "react-native-vector-icons/Fontisto";
 
-const Post = () => {
+const Post = (props) => {
+    const {post}= props;
+    console.log(post.name)
+
+
     const [paused, setPaused] = useState(false); 
 
     const onPlayPausePress = () => {
         setPaused(!paused);
     }
+
     return(
         <View style={styles.container} >
-            <TouchableWithoutFeedback onPress={onPlayPausePress}>
+            <TouchableWithoutFeedback onPress={onPlayPausePress} style={styles.video}>
                 <Video 
                     source={ require("./bob.mp4")}
                     style={styles.video}
@@ -25,31 +33,36 @@ const Post = () => {
 
                 <View style={styles.rightContainer}>
                     <View style={styles.profilePicContainer}>
-                        <Image style={styles.profilePic} source={{uri:"./bob.jpg"}} />
+                        <Image style={styles.profilePic} source={{uri:post.songImage}} />
                     </View>
                     <View style={styles.iconContainer}>
-                        <Entypo name={"beamed-note"} size={24} color= "white" />
-                        <Text>777</Text>
+                        <AntDesign name={"heart"} size={40} color= "white" />
+                        <Text  style={styles.statsLable}>{post.likes}</Text>
                     </View>
                     <View style={styles.iconContainer}>
-                        <Entypo name={"beamed-note"} size={24} color= "white" />
-                        <Text>777</Text>
+                        <FontAwesome name={"commenting"} size={40} color= "white" />
+                        <Text  style={styles.statsLable}>{post.comments}</Text>
                     </View>
                     <View style={styles.iconContainer}>
-                        <Entypo name={"beamed-note"} size={24} color= "white" />
-                        <Text>777</Text>
+                        <Fontisto name={"share-a"} size={35} color= "white" />
+                        <Text  style={styles.statsLable}>{post.shares}</Text>
                     </View>
                     
                 </View>
 
                 <View style={styles.bottomContainer}>
-                    <Text style={styles.handle}>@DamainRamsajan</Text>
-                    <Text style={styles.description}>The Legend Live</Text>
-                    
-                    <View style={styles.songRow}>
-                        <Entypo name={"beamed-note"} size={24} color= "white" />
-                        <Text style={styles.songName}>Bob Marley</Text>
+                    <View>
+                        <Text style={styles.handle}>@{post.user.userName}</Text>
+                        <Text style={styles.description}>{post.description}</Text>
+                        
+                        <View style={styles.songRow}>
+                            <Entypo name={"beamed-note"} size={24} color= "white" />
+                            <Text style={styles.songName}>{post.song}</Text>
+                        </View>
                     </View>
+
+                    <Image style={styles.songPic} source={{uri:post.songImage}} />
+                   
                 </View>
                 
             </View>

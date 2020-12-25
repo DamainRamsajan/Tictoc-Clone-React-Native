@@ -11,12 +11,13 @@ const styles = StyleSheet.create ({
         height: "100%",
         justifyContent: "flex-end",
     },
-    rightContainer: {
-        alignSelf: "flex-end",
-    },
-    bottomContainer: {
-        padding: 10,
-        marginBottom: 20
+    videoPlayButton: {
+        position: "absolute",
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right:0,
+        zIndex: 100,
     },
     video: {
         position: "absolute",
@@ -25,21 +26,38 @@ const styles = StyleSheet.create ({
         left: 0,
         right:0
     },
+    bottomContainer: {
+        padding: 10,
+        marginBottom: 20,
+        marginTop: 10,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "flex-end",
+        backgroundColor: 'rgba(255,0,0,.2)',
+        padding: 6,
+        borderRadius:15,
+        marginRight: 8,
+        marginLeft: 8
+    },
     handle: {
         color: "white",
         fontSize: 16,
         fontWeight: "600",
-        marginBottom: 10
+        marginBottom: 10,
+        marginLeft: 10
     },
     description: {
         color: "white",
         fontSize: 16,
         fontWeight: "300",
-        marginBottom: 10
+        marginBottom: 10,
+        marginLeft: 10
     },
     songRow: {
         flexDirection: "row",
-        alignItems: "center"
+        alignItems: "center",
+        marginLeft: 10,
+        marginBottom: 10,
     },
     songName: {
         color: "white",
@@ -47,11 +65,47 @@ const styles = StyleSheet.create ({
         fontWeight: "300",
         marginLeft:5
     },
+    songPic: {
+        width: 40,
+        height: 40,
+        borderRadius: 25,
+        borderWidth: 3,
+        borderColor: "grey",
+        marginBottom: 10,
+        marginRight: 10
+        
+    },
+    rightContainer: {
+        alignSelf: "flex-end",
+        height: 300,
+        justifyContent: "space-between",
+        alignItems: "center",
+        backgroundColor: 'rgba(255,0,0,.2)',
+        padding: 6,
+        borderRadius:10,
+        marginRight: 8
+    },
     profilePic: {
         width: 50,
         height: 50,
-    }
-    
+        borderRadius: 25,
+        borderWidth: 2,
+        borderColor: "white",
+        marginBottom: 8
+    },
+    statsLable: {
+        color: "white",
+        fontSize: 16,
+        fontWeight: "300",
+        marginTop: 5
+    },
+    iconContainer: {
+        alignItems: "center"
+    },
+    iconContainer: {
+        alignItems: "center"
+    },
+ 
 })
 
 export default styles;
