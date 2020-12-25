@@ -9,7 +9,7 @@
 import React from 'react';
 import {
   SafeAreaView, 
-  StatusBar,
+  StatusBar, Text
 } from 'react-native';
 import Home from "./src/screens/Home"
 
