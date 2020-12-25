@@ -12,9 +12,9 @@ const post1 = {
     description: "The King of Legends",
     song: "Stir it up",
     songImage: "https://img.apmcdn.org/871dda86bfe2251e4fe5514562da006647a8115d/uncropped/df6bb3-20110211-bob-marley.jpg",
-    likes: "999",
-    comments: "222",
-    shares: "888",
+    likes: 123,
+    comments: 222,
+    shares: 888,
 };
 
 const Home = () => {
