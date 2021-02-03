@@ -11,14 +11,17 @@ import {
   SafeAreaView, 
   StatusBar, Text
 } from 'react-native';
-import Home from "./src/screens/Home"
+import Home from "./src/screens/Home";
+import "react-native-gesture-handler";
+import Navigation from "./src/navigation";
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <Home/>
+      <SafeAreaView style={{flex:1}}>
+        <Navigation/>
+        {/* <Home/> */}
       </SafeAreaView>
     </>
   );

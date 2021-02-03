@@ -5,7 +5,7 @@ const styles = StyleSheet.create ({
         width: "100%",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
-        
+        backgroundColor: "black"
     },
     uiContainer: {
         height: "100%",
@@ -33,7 +33,7 @@ const styles = StyleSheet.create ({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "flex-end",
-        backgroundColor: 'rgba(255,0,0,.2)',
+        backgroundColor: 'rgba(255,0,0,.1)',
         padding: 6,
         borderRadius:15,
         marginRight: 8,
@@ -80,7 +80,7 @@ const styles = StyleSheet.create ({
         height: 300,
         justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: 'rgba(255,0,0,.2)',
+        backgroundColor: 'rgba(255,0,0,.1)',
         padding: 6,
         borderRadius:10,
         marginRight: 8

@@ -8,7 +8,7 @@ import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Fontisto from "react-native-vector-icons/Fontisto";
 
 const Post = (props) => {
-    // const {post}= props;
+    
     const [post, setPost] = useState (props.post);
 
     const [isLiked, setIsLiked] = useState(false);
